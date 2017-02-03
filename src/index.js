@@ -13,7 +13,6 @@ browserHistory.listen( location =>  {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={ShotokanPage} />
-    <Route path="/kata" component={ShotokanPage} />
     <Route path="/kata/:kataName" component={KataPage}/>
   </Router>,
   document.getElementById('root')

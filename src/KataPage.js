@@ -21,7 +21,7 @@ class KataPage extends Component {
                         <img src={logo} className="header-logo" alt="logo" />
                         <h3 className="header-title">Shotokan Karate</h3>
                     </nav>
-                    <Link to="/kata">
+                    <Link to="/">
                         <button className="button-back btn btn-primary" type="button">back</button>
                     </Link>
                     <div className="shotokan-page-body panel panel-default">
