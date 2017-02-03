@@ -57,6 +57,16 @@ class KataVideoSource {
     getVideoList(source) { 
         return this.videoList[source];
     }
+
+    getVideoName(kataName) {
+        let list = this.getJKAKatasFromYouTubeVideoList();
+        for (let i = 0; i < list.length; i += 1) {
+            if (list[i].kataName === kataName) {
+                return list[i].kataVideoName;
+            }
+        }
+    }
+
 }
 
 export default KataVideoSource;

@@ -1,17 +1,19 @@
 import React, { Component } from "react";
+import { Link } from "react-router";
 
 class KataLink extends Component {
     render() {
         return (
             <li className="list-group-item">
-                <a href={this.getLink(this.props.kataVideoName)}>{this.props.kataName}</a>
+                <Link to={`kata/${this.getLink(this.props.kataName)}`}>
+                    {this.props.kataName}
+                </Link>
             </li>
         );
     }
 
-    getLink(kataVideoName) {
-        let videoBaseUrl = "http://spock.webfactional.com/videos/shotokan-karate/";
-        return videoBaseUrl + kataVideoName;
+    getLink(kataName) {
+        return kataName.replace(" ", "-");
     }
 }
 
