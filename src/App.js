@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './jka-logo.png';
-import './App.css';
+import logo from './images/jka-logo.png';
 import ShotokanPage from "./ShotokanPage";
+
+import './App.css';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Shotokan</h2>
+          <h1>Shotokan Karate</h1>
         </div>
         <ShotokanPage />
       </div>
