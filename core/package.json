@@ -1,6 +1,6 @@
 {
-  "name": "node-es6-tdd",
-  "version": "1.0.1",
+  "name": "shotokan-core",
+  "version": "0.1.0",
   "description": "node es6 tdd",
   "main": "./library/index.js",
   "scripts": {
