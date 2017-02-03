@@ -1,6 +1,11 @@
-import React, { Component } from "react";
-import Shotokan from "./core/source/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ShotokanPage.css";
+import logo from './images/jka-logo.png';
+
+import React, { Component } from "react";
+
+import Shotokan from "./core/source/index";
+
 
 class ShotokanPage extends Component {
     constructor(props) {
@@ -10,6 +15,23 @@ class ShotokanPage extends Component {
     }
 
     render() {
+        return (
+            <div className="shotokan-page container-fluid">
+                <nav class="navbar navbar-default">
+                    <img src={logo} className="header-logo" alt="logo" />
+                    <h3 className="header-title">Shotokan Karate</h3>
+                </nav>
+                <div className="shotokan-page-body">
+                    <h4>Kata</h4>
+                    <ul>
+                        {this.getKatas()}
+                    </ul>
+                </div>
+            </div>
+        );
+    }
+
+    getKatas() {
         let kataList = this.shotokan.getJKAKatasFromYouTubeVideoList();
         let katas = [];
 
@@ -17,14 +39,7 @@ class ShotokanPage extends Component {
             katas.push(<li key={k}>{kataList[k].kataName}</li>);
         }
 
-        return (
-            <div className="shotokan-page">
-                <h2>Kata</h2>
-                <ul>
-                    {katas}
-                </ul>
-            </div>
-        );
+        return katas;
     }
 }
 
