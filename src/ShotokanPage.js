@@ -17,15 +17,17 @@ class ShotokanPage extends Component {
     render() {
         return (
             <div className="shotokan-page container-fluid">
-                <nav class="navbar navbar-default">
+                <nav class="navbar">
                     <img src={logo} className="header-logo" alt="logo" />
                     <h3 className="header-title">Shotokan Karate</h3>
                 </nav>
-                <div className="shotokan-page-body">
-                    <h4>Kata</h4>
-                    <ul>
-                        {this.getKatas()}
-                    </ul>
+                <div className="shotokan-page-body panel panel-default">
+                    <div className="panel-heading">Kata</div>
+                    <div className="panel-body">
+                        <ul className="list-group">
+                            {this.getKatas()}
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
@@ -36,7 +38,7 @@ class ShotokanPage extends Component {
         let katas = [];
 
         for (let k = 0; k < kataList.length; k += 1) {
-            katas.push(<li key={k}>{kataList[k].kataName}</li>);
+            katas.push(<li key={k} className="list-group-item">{kataList[k].kataName}</li>);
         }
 
         return katas;
