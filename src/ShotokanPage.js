@@ -3,9 +3,8 @@ import "./ShotokanPage.css";
 import logo from './images/jka-logo.png';
 
 import React, { Component } from "react";
-
 import Shotokan from "./core/source/index";
-
+import KataLink from "./KataLink";
 
 class ShotokanPage extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ class ShotokanPage extends Component {
     render() {
         return (
             <div className="shotokan-page container-fluid">
-                <nav class="navbar">
+                <nav className="navbar">
                     <img src={logo} className="header-logo" alt="logo" />
                     <h3 className="header-title">Shotokan Karate</h3>
                 </nav>
@@ -38,7 +37,7 @@ class ShotokanPage extends Component {
         let katas = [];
 
         for (let k = 0; k < kataList.length; k += 1) {
-            katas.push(<li key={k} className="list-group-item">{kataList[k].kataName}</li>);
+            katas.push(<KataLink key={k} kataName={kataList[k].kataName} kataVideoName={kataList[k].kataVideoName} />);
         }
 
         return katas;
