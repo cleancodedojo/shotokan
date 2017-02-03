@@ -20,3 +20,8 @@
     margin-top: 10px;
     vertical-align: middle;
 }
+
+.shotokan-page .list-group-item a {
+    display: block;
+    text-decoration: none;
+}
