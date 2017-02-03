@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Shotokan from "shotokan-core";
+import Shotokan from "./core/source/index";
 import "./ShotokanPage.css";
 
 class ShotokanPage extends Component {
