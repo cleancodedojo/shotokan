@@ -20,4 +20,12 @@ describe("KataVideoSource", () => {
         
         expect(kataVideos.getVideoList(source).length).to.be.greaterThan(0);
     });
+
+    it("shall have ability to get kata video name given the kata name", () => { 
+        let kataVideos = new KataVideoSource();
+        let kataName = "kanku dai";
+        let expectedKataVideoName = "jka-kata-10-kanku-dai-kurihara-kazuaki.mp4";
+
+        expect(kataVideos.getVideoName(kataName)).to.equal(expectedKataVideoName);
+    });
 });

@@ -1,6 +1,6 @@
 # shotokan
 * shotokan karate web application
-* url: shotokan.herokuapp.com
+* [https://shotokan.herokuapp.com]
 
 ## developer machine setup
 ### mac operating system
@@ -54,3 +54,4 @@ MIT
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/
 [Ray Joseph de Castro]: https://github.com/raydecastro/
+[https://shotokan.herokuapp.com]: https://shotokan.herokuapp.com
