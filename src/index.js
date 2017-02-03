@@ -6,6 +6,10 @@ import { Router, Route, browserHistory } from 'react-router'
 import ShotokanPage from './ShotokanPage';
 import KataPage from './KataPage';
 
+browserHistory.listen( location =>  {
+  window.ga('send', 'pageview', location.pathname);
+});
+
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={ShotokanPage} />
