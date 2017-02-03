@@ -1,8 +1,8 @@
 {
-  "name": "node-es6-tdd",
-  "version": "1.0.1",
+  "name": "shotokan-core",
+  "version": "0.1.0",
   "description": "node es6 tdd",
-  "main": "./library/app.js",
+  "main": "./library/index.js",
   "scripts": {
     "test": "gulp test",
     "test-auto": "gulp test-auto",
@@ -37,5 +37,8 @@
     "presets": [
       "es2015"
     ]
+  },
+  "engines": {
+    "node": "7.5.0"
   }
 }
